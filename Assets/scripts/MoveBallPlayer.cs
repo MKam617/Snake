@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlayer : MonoBehaviour
+public class MoveBallPlayer : MonoBehaviour
 {
-    [SerializeField] private GameObject Player;
-    [SerializeField] private Transform BallCentarPoint; // if Player is a Ball
+    [SerializeField] private GameObject BallPlayer;
+    [SerializeField] private Transform BallCentarPoint; // if BallPlayer is a Ball
     [SerializeField] private int movingForce;
     [SerializeField] private int jumpingForce;
-    private Rigidbody player_rb;
+    private Rigidbody ballPlayer_rb;
     private bool forward;
     private bool jump;
     private float rotateHow;
@@ -17,8 +17,7 @@ public class MovePlayer : MonoBehaviour
 
     private void Start()
     {
-        // for phisic movement only
-        player_rb = Player.gameObject.GetComponent<Rigidbody>();
+        ballPlayer_rb = BallPlayer.gameObject.GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -29,21 +28,21 @@ public class MovePlayer : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space)) jump = true;
 
-        BallCentarPoint.gameObject.transform.position = Player.transform.position;     
-        Player.transform.rotation = BallCentarPoint.gameObject.transform.rotation;    
+        BallCentarPoint.gameObject.transform.position = BallPlayer.transform.position;     
+        BallPlayer.transform.rotation = BallCentarPoint.gameObject.transform.rotation;    
     }
 
     private void FixedUpdate()
     {
         if (forward) 
         {
-            player_rb.AddForce(Player.gameObject.transform.forward * movingForce);
+            ballPlayer_rb.AddForce(BallPlayer.gameObject.transform.forward * movingForce);
             forward = false;
         }
         if (jump) 
         {
             jump = false;
-            player_rb.AddForce(Vector3.up * jumpingForce);
+            ballPlayer_rb.AddForce(Vector3.up * jumpingForce);
         }
     }
 }
