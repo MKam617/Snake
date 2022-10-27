@@ -5,14 +5,16 @@ using UnityEngine;
 public class MoveBallPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject BallPlayer;
-    [SerializeField] private Transform BallCentarPoint; // if BallPlayer is a Ball
+    [SerializeField] private Transform BallPlayerCentarPoint; 
     [SerializeField] private int movingForce;
     [SerializeField] private int jumpingForce;
+    [SerializeField] [Range(0.1f, 5)] private float rotateSpeed;
     private Rigidbody ballPlayer_rb;
     private bool forward;
     private bool jump;
     private float rotateHow;
-    [SerializeField] private int rotateForce;
+    //[SerializeField] private int rotateForce;
+
 
 
     private void Start()
@@ -24,12 +26,12 @@ public class MoveBallPlayer : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W)) forward = true;
         rotateHow = Input.GetAxis("Horizontal");
-        BallCentarPoint.gameObject.transform.Rotate(new Vector3(0, rotateHow, 0));
+        BallPlayerCentarPoint.gameObject.transform.Rotate(new Vector3(0, rotateHow, 0));
 
         if (Input.GetKey(KeyCode.Space)) jump = true;
 
-        BallCentarPoint.gameObject.transform.position = BallPlayer.transform.position;     
-        BallPlayer.transform.rotation = BallCentarPoint.gameObject.transform.rotation;    
+        BallPlayerCentarPoint.transform.position = BallPlayer.transform.position;     
+        BallPlayer.transform.rotation = BallPlayerCentarPoint.transform.rotation;    
     }
 
     private void FixedUpdate()
