@@ -8,13 +8,11 @@ public class MoveBallPlayer : MonoBehaviour
     [SerializeField] private Transform BallPlayerCentarPoint; 
     [SerializeField] private int movingForce;
     [SerializeField] private int jumpingForce;
-    [SerializeField] [Range(0.1f, 5)] private float rotateSpeed;
+    // [SerializeField] [Range(0.1f, 5)] private float rotateSpeed;
     private Rigidbody ballPlayer_rb;
     private bool forward;
     private bool jump;
     private float rotateHow;
-    //[SerializeField] private int rotateForce;
-
 
 
     private void Start()
