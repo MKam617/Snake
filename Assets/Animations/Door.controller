@@ -34,7 +34,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: open
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3586756436838614340}
   m_Solo: 0
@@ -56,7 +59,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: open
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6994658154189225942}
   m_Solo: 0
@@ -161,14 +167,8 @@ AnimatorController:
   m_Name: Door
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: doOpen
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: doClose
-    m_Type: 9
+  - m_Name: open
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -193,7 +193,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: open
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -445945978003509401}
   m_Solo: 0
@@ -222,13 +225,13 @@ AnimatorStateMachine:
     m_Position: {x: 200, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1092087013106770292}
-    m_Position: {x: 190, y: 140, z: 0}
+    m_Position: {x: 200, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -445945978003509401}
-    m_Position: {x: 300, y: 210, z: 0}
+    m_Position: {x: 500, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3586756436838614340}
-    m_Position: {x: 400, y: 110, z: 0}
+    m_Position: {x: 500, y: 40, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -248,7 +251,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: doOpen
+    m_ConditionEvent: open
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1092087013106770292}
