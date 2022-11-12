@@ -12,8 +12,13 @@ GameObject:
   - component: {fileID: 6759951551177341264}
   - component: {fileID: 6666545256680139840}
   - component: {fileID: 6021384641893858934}
+<<<<<<< HEAD
   - component: {fileID: 6478880124172904985}
   - component: {fileID: 8561127451914809571}
+=======
+  - component: {fileID: -5332716873658380793}
+  - component: {fileID: 685829499818416805}
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
   m_Layer: 0
   m_Name: NewBall
   m_TagString: Untagged
@@ -97,7 +102,11 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!54 &6478880124172904985
+=======
+--- !u!54 &-5332716873658380793
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,15 +114,25 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7388726329866823435}
   serializedVersion: 2
+<<<<<<< HEAD
   m_Mass: 0.1
+=======
+  m_Mass: 0.01
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
+<<<<<<< HEAD
   m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!153 &8561127451914809571
+=======
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!153 &685829499818416805
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
 ConfigurableJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +150,11 @@ ConfigurableJoint:
   m_XMotion: 1
   m_YMotion: 1
   m_ZMotion: 1
+<<<<<<< HEAD
   m_AngularXMotion: 2
+=======
+  m_AngularXMotion: 1
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
   m_AngularYMotion: 1
   m_AngularZMotion: 0
   m_LinearLimitSpring:
@@ -156,7 +179,11 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_AngularYLimit:
+<<<<<<< HEAD
     limit: 35
+=======
+    limit: 0
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
     bounciness: 0
     contactDistance: 0
   m_AngularZLimit:

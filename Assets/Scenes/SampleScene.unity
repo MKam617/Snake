@@ -1171,8 +1171,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BallPlayer: {fileID: 2130650417}
   BallPlayerCentarPoint: {fileID: 918194327}
+<<<<<<< HEAD
   movingForce: 10
   jumpingForce: 40
+=======
+  movingForce: 20
+  jumpingForce: 40
+  rotateSpeed: 1.04
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
 --- !u!1 &1613928562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,8 +1342,12 @@ MonoBehaviour:
   NewBall: 0
   NewBallPrefab: {fileID: 7388726329866823435, guid: 8ac4020ce51f8ce49b7582068751d02f, type: 3}
   PlayerBall: {fileID: 2130650417}
+<<<<<<< HEAD
   PlayerBallCenterPoint: {fileID: 918194326}
   ballsOnScheme: []
+=======
+  newBalls: []
+>>>>>>> cfdd48e7aaec03b062a3092cee82d9f6e9f9065d
 --- !u!4 &1675960542
 Transform:
   m_ObjectHideFlags: 0
