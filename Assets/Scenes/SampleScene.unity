@@ -242,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575551421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: -27.7}
+  m_LocalPosition: {x: 0, y: 0.6, z: -39.8}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 1512425226}
@@ -327,8 +327,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633297529}
-  m_LocalRotation: {x: 0.28355473, y: 0.000979024, z: -0.00022687984, w: 0.9589555}
-  m_LocalPosition: {x: -0.4527971, y: 2.9301293, z: -3.1432166}
+  m_LocalRotation: {x: 0.25639746, y: -0.027055113, z: 0.0072086044, w: 0.96616584}
+  m_LocalPosition: {x: 0.44851983, y: 4.5775733, z: -8.004713}
   m_LocalScale: {x: 0.8333332, y: 0.8333332, z: 0.83333313}
   m_Children: []
   m_Father: {fileID: 2130650418}
@@ -734,7 +734,7 @@ GameObject:
   m_Layer: 0
   m_Name: DoorTriggerPoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1336,6 +1336,7 @@ MonoBehaviour:
   NewBall: 0
   NewBallPrefab: {fileID: 7388726329866823435, guid: 8ac4020ce51f8ce49b7582068751d02f, type: 3}
   PlayerBall: {fileID: 2130650417}
+  PlayerBallCenterPoint: {fileID: 918194326}
   ballsOnScheme: []
 --- !u!4 &1675960542
 Transform:

@@ -7,6 +7,7 @@ public class AddNew : MonoBehaviour
     [HideInInspector] public bool NewBall = false;
     [SerializeField] private GameObject NewBallPrefab;
     [SerializeField] private GameObject PlayerBall;
+    [SerializeField] private GameObject PlayerBallCenterPoint;
     public List<GameObject> ballsOnScheme;
     private float posBallPosX;
     private float posBallPosZ;
@@ -23,13 +24,14 @@ public class AddNew : MonoBehaviour
     private GameObject lastAddingBall;
     private GameObject posBall;
 
+
     private void Start()
     {
         newBallScaleX = NewBallPrefab.transform.localScale.x;
         newBallScaleY = NewBallPrefab.transform.localScale.y;
         newBallScaleZ = NewBallPrefab.transform.localScale.z;
-        offsetNewCreationX = newBallScaleX;
-        offsetNewCreationZ = newBallScaleZ;
+        offsetNewCreationX = newBallScaleX + 1;
+        offsetNewCreationZ = newBallScaleZ + 1;
 
         ballsOnScheme.Add(PlayerBall);
     }
@@ -37,6 +39,9 @@ public class AddNew : MonoBehaviour
     private void Update()
     {
         posBall = ballsOnScheme[ballsOnScheme.Count - 1];
+
+
+
         posBallRotation = posBall.transform.rotation;
         posBallPosX = posBall.transform.position.x;
         posBallPosZ = posBall.transform.position.z;
@@ -46,7 +51,8 @@ public class AddNew : MonoBehaviour
 
 
         if (NewBall == true){
-            lastAddingBall = Instantiate(NewBallPrefab, new Vector3(posBallPosX - sin * offsetNewCreationX, newBallScaleY/2, posBallPosZ - offsetNewCreationZ * cos), posBallRotation);
+            lastAddingBall = Instantiate(NewBallPrefab, new Vector3(posBallPosX - sin * offsetNewCreationX, newBallScaleY/2, posBallPosZ - offsetNewCreationZ * cos), PlayerBallCenterPoint.transform.rotation);
+
 
             lastAddingBall.GetComponent<ConfigurableJoint>().connectedBody = ballsOnScheme[ballsOnScheme.Count - 1].GetComponent<Rigidbody>();
 
